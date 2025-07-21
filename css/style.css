@@ -1,27 +1,9 @@
 :root{
-    --main-color:;
-    --sub-color:;
-    --bg-color:;
-    --text-color:;
-}
-
-/* 共通装飾 */
-.ja {
-    font-family: "Shippori Mincho", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.p-main {
-    color: var(--main-color);
-}
-
-.p-beta {
-    display: inline-block;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: var(--white);
-    background-color: var(--main-color);
+    --main-color:#69BFAB;
+    --sub-color:#345F55;
+    --accent-color:#FFD900;
+    --text-color:#fff;
+    --text-color-sub:#222;
 }
 
 /* *{
@@ -30,17 +12,17 @@
 
 html{
     width: 100%;
-    font-size: ;
-    font-family: ;
+    font-size: 62.5%;
+    font-family: "Yusei Magic", "Kaisei Opti", "Kiwi Maru", "Noto Sans", sans-serif;
     color: var(--text-color);
 }
 
 body{
     min-width: 1200px;
     width: 100%;
-    font-size: ;
-    line-height: ;
-    letter-spacing: ;
+    font-size: 100%;
+    line-height: 1.5;
+    letter-spacing: .03em;
 }
 
 .pc{
@@ -62,11 +44,8 @@ body{
     }
 }
 
-.wrap{
-    overflow: hidden;
-}
-
 a{
+    display: block;
     text-decoration: none;
     color: var(--text-color);
     transition: opacity .2s;
