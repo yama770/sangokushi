@@ -18,11 +18,17 @@ html{
 }
 
 body{
-    min-width: 1200px;
+    max-width: 1440px;
     width: 100%;
     font-size: 100%;
     line-height: 1.5;
     letter-spacing: .03em;
+    background: var(--main-color);
+}
+
+.inner{
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .pc{
@@ -114,4 +120,212 @@ nav ul li {
     max-width: 200px;
 }
 
+/* エントリーセクション */
+.entry {
+    width: 100%;
+    padding: 4rem 2rem;
+}
 
+.section-title {
+    font-size: 6.4rem;
+}
+
+.entry .section-title {
+    text-align: center;
+}
+
+.entry__content {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+
+.entry__img {
+    width: 40rem;
+    height: 30rem;
+    padding: 3rem;
+    border-radius: 2rem;
+    background-color: var(--accent-color);
+}
+
+.entry__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.entry__button-block {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button {
+    width: 100%;
+    height: auto;
+}
+
+.button a {
+    display: block;
+    width: 100%;
+    height: 5rem;
+    padding: 0 2rem;
+    text-align: center;
+    color: var(--text-color-sub);
+    background-color: var(--text-color);
+    font-size: 2.4rem;
+    line-height: 2;
+    border-radius: 9999px;
+    transition: background-color .2s, color .2s;
+}
+
+.button a:hover {
+    background-color: var(--accent-color);
+}
+
+.button a span{
+    position: relative;
+    display: inline-block;
+    padding-left: 4rem;
+}
+
+.button a span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.8rem;
+    height: 4.5rem;
+    background: url(../img/avatar-ponite.png) no-repeat center center / cover;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:500px) {
+    .entry {
+        padding: 3rem 2rem;
+    }
+
+    .section-title {
+        font-size: 3.6rem;
+    }
+
+    .entry__content {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .entry__img {
+        width: 25rem;
+        height: 20rem;
+    }
+
+    .entry__button-block {
+        width: 100%;
+        max-width: 30rem;
+    }
+
+    .button a {
+        font-size: 2rem;
+        height: 4.5rem;
+    }
+
+    .button a span::before {
+        width: 3.5rem;
+        height: 3.8rem;
+    }
+    
+}
+
+
+/* フッター */
+.footer {
+    width: 100%;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer__content {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.footer__logo {
+    width: 10rem;
+    height: 10rem;
+}
+
+.footer__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer__nav {
+    padding-top: 2rem;
+}
+
+.footer__nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__nav-item {
+    padding: 0 1rem;
+    font-size: 1.6rem;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.footer__text {
+    font-size: 1rem;
+}
+
+@media screen and (max-width:500px) {
+    .footer {
+        padding: 3rem 1rem 1rem;
+    }
+
+    .footer__content {
+        justify-content: center;
+        gap: 6rem;
+    }
+
+    .footer__logo {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .footer__nav-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer__nav-item {
+        padding: 0;
+        font-size: 1.4rem;
+    }
+
+    .footer__info {
+        margin-top: 2rem;
+    }
+
+    .footer__text {
+        font-size: 0.8rem;
+    }
+}
