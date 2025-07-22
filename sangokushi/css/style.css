@@ -1,0 +1,88 @@
+:root{
+    --main-color:;
+    --sub-color:;
+    --bg-color:;
+    --text-color:;
+}
+
+/* 共通装飾 */
+.ja {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.p-main {
+    color: var(--main-color);
+}
+
+.p-beta {
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+/* *{
+    outline: 1px solid magenta;
+} */
+
+html{
+    width: 100%;
+    font-size: ;
+    font-family: ;
+    color: var(--text-color);
+}
+
+body{
+    min-width: 1200px;
+    width: 100%;
+    font-size: ;
+    line-height: ;
+    letter-spacing: ;
+}
+
+.pc{
+    display: inherit;
+}
+
+.sp{
+    display: none;
+}
+
+
+@media screen and (max-width:767px) {
+    .pc{
+        display: none;
+    }
+    
+    .sp{
+        display: inherit;
+    }
+}
+
+.wrap{
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: opacity .2s;
+}
+
+img, picture{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li{
+    list-style: none;
+}
+
+/* ボタン */
+
+
+/* ヘッダー */
