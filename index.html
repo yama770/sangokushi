@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>さんごくし2.0</title>
-    <meta name="description" content="さんごくし2.0は、Meta leafを紹介するためのサイトです。" />
+    <meta
+      name="description"
+      content="さんごくし2.0は、Meta leafを紹介するためのサイトです。"
+    />
     <meta name="keywords" content="Meta leaf, Webサイト, ポートフォリオ" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/favicon.ico" />
@@ -12,8 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaisei+Opti&family=Kiwi+Maru&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sawarabi+Gothic&family=Sawarabi+Mincho&family=Shippori+Mincho&family=Yusei+Magic&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaisei+Opti&family=Kiwi+Maru&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sawarabi+Gothic&family=Sawarabi+Mincho&family=Shippori+Mincho&family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
     <!-- reset css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <!-- slick css -->
@@ -21,134 +24,202 @@
     <link rel="stylesheet" href="css/slick-theme.css" />
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css" />
-</head>
+  </head>
 
-<body>
-    <header class="wrapper__header inner">
+  <body>
+    <header id="inner">
         <h1 class="site-title">
-            <a href="#"><img src="img/logo.svg" alt="Meta Leaf" /></a>
+            <a href="#"><img src="img/logo.svg" alt="Meta Leaf logo" /></a>
         </h1>
-        <nav>
-            <ul class="navi">
-                <li>TOP</li>
-                <li>Meta Leaf</li>
-                <li>Event`s</li>
-                <li>Q&A</li>
+
+        <nav class="header-nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item"><a href="#">TOP</a></li>
+              <li class="header__nav-item"><a href="#">Meta Leaf</a></li>
+              <li class="header__nav-item"><a href="#">EVENT's</a></li>
+              <li class="header__nav-item"><a href="#">Q&A</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+
     <div class="mainvisual">
-        <img src="img/mv_bg.png" alt="メインビジュアルの画像" />
+      <img src="img/mv_bg.png" alt="メインビジュアルの画像" />
     </div>
 
     <div class="mainvisual_photo">
-        <div class="mainvisual_photo__mainvisual_photo01">
-            <img src="img/mv_pumpkin01.png" alt="パンプキンアバターの画像" />
-            <img src="img/mv_pumpkin02.png" alt="パンプキンアバターの画像" />
-            <img src="img/mv_pumpkin03.png" alt="パンプキンアバターの画像" />
+      <div class="mainvisual_photo__mainvisual_photo01">
+        <div class="pumpkin-photo">
+          <img src="img/mv_pumpkin01.png" alt="パンプキンアバターの画像" />
         </div>
+        <div class="pumpkin-photo">
+          <img src="img/mv_pumpkin02.png" alt="パンプキンアバターの画像" />
+        </div>
+        <div class="pumpkin-photo">
+          <img src="img/mv_pumpkin03.png" alt="パンプキンアバターの画像" />
+        </div>
+      </div>
 
+      <div class="mainvisual_photo__mainvisual_photo02">
+        <div class="pumpkin-photo">
+          <img src="img/mv_pumpkin01.png" alt="パンプキンアバターの画像" />
+        </div>
+        <div class="pumpkin-photo">
+          <img src="img/mv_pumpkin02.png" alt="パンプキンアバターの画像" />
+        </div>
+        <div class="pumpkin-photo">
+          <img src="img/mv_pumpkin03.png" alt="パンプキンアバターの画像" />
+        </div>
+      </div>
+    </div>
 
     <main>
-        <section class="faq inner">
-            <h2 class="section-title">
-                <span class="section-title__sub">その不安、解決します！</span>
-                Q&A
-            </h2>
+      <section class="overview">
+        <h2 class="section-title">
+            メタリーフって何？？
+          <span class="section-title__sub">メタリーフについて</span>
+        </h2>
 
-            <div class="faq__slider">
-                <div class="faq__slide">
-                    <div class="faq__slide-img">
-                        <img src="img/faq01.png" alt="FAQ画像1">
-                    </div>
-                    <h3 class="faq__slide-title">Meta Leafって何ですか？</h3>
-                    <p class="faq__slide-text">Meta Leafは次世代のメタバース学習プラットフォームです。仮想空間で仲間と一緒に学び、成長できる新しい学習体験を提供します。</p>
-                </div>
-            
-                <div class="faq__slide">
-                    <div class="faq__slide-img">
-                        <img src="img/faq02.png" alt="FAQ画像2">
-                    </div>
-                    <h3 class="faq__slide-title">どんな人が参加していますか？</h3>
-                    <p class="faq__slide-text">学習意欲の高い学生から社会人まで、幅広い年齢層の方が参加しています。共通の目標を持つ仲間と出会えるのが特徴です。</p>
-                </div>
-            
-                <div class="faq__slide">
-                    <div class="faq__slide-img">
-                        <img src="img/faq03.png" alt="FAQ画像3">
-                    </div>
-                    <h3 class="faq__slide-title">料金はかかりますか？</h3>
-                    <p class="faq__slide-text">基本的な機能は無料でご利用いただけます。プレミアム機能を使いたい場合のみ、月額料金が発生します。</p>
-                </div>
-            
-                <div class="faq__slide">
-                    <div class="faq__slide-img">
-                        <img src="img/faq04.png" alt="FAQ画像4">
-                    </div>
-                    <h3 class="faq__slide-title">どのデバイスで使えますか？</h3>
-                    <p class="faq__slide-text">PC、スマートフォン、タブレット、VRヘッドセットなど、様々なデバイスに対応しています。お好みの環境で学習できます。</p>
-                </div>
-            
-                <div class="faq__slide">
-                    <div class="faq__slide-img">
-                        <img src="img/faq05.png" alt="FAQ画像5">
-                    </div>
-                    <h3 class="faq__slide-title">サポート体制はありますか？</h3>
-                    <p class="faq__slide-text">24時間365日のチャットサポートと、週1回の個別相談会を実施しています。安心してご利用いただけます。</p>
-                </div>
+        <div class="overview__overview-img">
+            <img src="img/group.png" alt="アバターが集合している画像">
+        </div>
+
+        <div id="overview__overview-text">
+            <p id="overview__overview-texts">
+                メタリーフはプログラミング学習者のためのオンラインコミュニティ<br>
+                お互いに助け合い高めあうことができます<br>
+                素敵な仲間と出会うことができる最高の場所です
+            </p>
+        </div>
+      </section>
+
+      <section class="use">
+        <h2 class="section-title">
+          <span class="section-title__sub">metaleafの使い方</span>
+          効率的な活用法
+        </h2>
+
+        <div class="overview__overview-img">
+            <img src="img/group.png" alt="アバターが集合している画像">
+        </div>
+
+        <div class="overview__overview-text">
+            <p class="overview__texts">
+                メタリーフはプログラミング学習者のためのオンラインコミュニティ<br>
+                お互いに助け合い高めあうことができます<br>
+                素敵な仲間と出会うことができる最高の場所です
+            </p>
+        </div>
+      </section>
+
+      <section class="faq inner">
+        <h2 class="section-title">
+          <span class="section-title__sub">その不安、解決します！</span>
+          Q&A
+        </h2>
+
+        <div class="faq__slider">
+          <div class="faq__slide">
+            <div class="faq__slide-img">
+              <img src="img/faq01.png" alt="FAQ画像1" />
             </div>
-        </section>
+            <h3 class="faq__slide-title">Meta Leafって何ですか？</h3>
+            <p class="faq__slide-text">
+              Meta
+              Leafは次世代のメタバース学習プラットフォームです。仮想空間で仲間と一緒に学び、成長できる新しい学習体験を提供します。
+            </p>
+          </div>
 
-            <section class="entry inner">
-                <h2 class="section-title">
-                    切磋琢磨できる<br class="sp">仲間と出会おう！
-                </h2>
-
-                <div class="entry__content">
-                    <div class="entry__img">
-                        <img src="img/group.png" alt="Meta Leafの仲間たち">
-                    </div>
-
-                    <div class="entry__button-block">
-                        <button class="button">
-                            <a href="#"><span>参加してみる</span></a>
-                        </button>
-
-                        <button class="button">
-                            <a href="#"><span>具体的な使い方を見る</span></a>
-                        </button>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer inner">
-            <div class="footer__content">
-                <div class="footer__logo">
-                    <img src="img/logo.svg" alt="meta leaf logo">
-                </div>
-
-                <nav class="footer__nav">
-                    <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a href="#">TOP</a></li>
-                        <li class="footer__nav-item"><a href="#">Meta Leaf</a></li>
-                        <li class="footer__nav-item"><a href="#">EVENT's</a></li>
-                        <li class="footer__nav-item"><a href="#">Q&A</a></li>
-                    </ul>
-                </nav>
-
+          <div class="faq__slide">
+            <div class="faq__slide-img">
+              <img src="img/faq02.png" alt="FAQ画像2" />
             </div>
+            <h3 class="faq__slide-title">どんな人が参加していますか？</h3>
+            <p class="faq__slide-text">
+              学習意欲の高い学生から社会人まで、幅広い年齢層の方が参加しています。共通の目標を持つ仲間と出会えるのが特徴です。
+            </p>
+          </div>
 
-            <div class="footer__info">
-                <p class="footer__text">© 2023 Meta Leaf All Rights Reserved.</p>
-                <p class="footer__text">このサイトは、Meta leafを紹介するためのサイトです。</p>
+          <div class="faq__slide">
+            <div class="faq__slide-img">
+              <img src="img/faq03.png" alt="FAQ画像3" />
             </div>
-        </footer>
+            <h3 class="faq__slide-title">料金はかかりますか？</h3>
+            <p class="faq__slide-text">
+              基本的な機能は無料でご利用いただけます。プレミアム機能を使いたい場合のみ、月額料金が発生します。
+            </p>
+          </div>
 
-        <script src="js/jquery-3.7.1.min.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/script.js"></script>
-    </body>
+          <div class="faq__slide">
+            <div class="faq__slide-img">
+              <img src="img/faq04.png" alt="FAQ画像4" />
+            </div>
+            <h3 class="faq__slide-title">どのデバイスで使えますか？</h3>
+            <p class="faq__slide-text">
+              PC、スマートフォン、タブレット、VRヘッドセットなど、様々なデバイスに対応しています。お好みの環境で学習できます。
+            </p>
+          </div>
 
+          <div class="faq__slide">
+            <div class="faq__slide-img">
+              <img src="img/faq05.png" alt="FAQ画像5" />
+            </div>
+            <h3 class="faq__slide-title">サポート体制はありますか？</h3>
+            <p class="faq__slide-text">
+              24時間365日のチャットサポートと、週1回の個別相談会を実施しています。安心してご利用いただけます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="entry inner">
+        <h2 class="section-title">
+          切磋琢磨できる<br class="sp" />仲間と出会おう！
+        </h2>
+
+        <div class="entry__content">
+          <div class="entry__img">
+            <img src="img/group.png" alt="Meta Leafの仲間たち" />
+          </div>
+
+          <div class="entry__button-block">
+            <button class="button">
+              <a href="#"><span>参加してみる</span></a>
+            </button>
+
+            <button class="button">
+              <a href="#"><span>具体的な使い方を見る</span></a>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer inner">
+      <div class="footer__content">
+        <div class="footer__logo">
+          <img src="img/logo.svg" alt="meta leaf logo" />
+        </div>
+
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a href="#">TOP</a></li>
+            <li class="footer__nav-item"><a href="#">Meta Leaf</a></li>
+            <li class="footer__nav-item"><a href="#">EVENT's</a></li>
+            <li class="footer__nav-item"><a href="#">Q&A</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__info">
+        <p class="footer__text">© 2023 Meta Leaf All Rights Reserved.</p>
+        <p class="footer__text">
+          このサイトは、Meta leafを紹介するためのサイトです。
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
