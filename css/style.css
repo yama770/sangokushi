@@ -16,11 +16,13 @@ html{
     font-size: 62.5%;
     font-family: "Yusei Magic", "Kaisei Opti", "Kiwi Maru", "Noto Sans", sans-serif;
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 body{
     max-width: 1440px;
     width: 100%;
+    overflow-x: hidden;
     font-size: 100%;
     line-height: 1.5;
     letter-spacing: .03em;
@@ -121,6 +123,163 @@ nav ul li {
     max-width: 200px;
 }
 
+/* 参加者の声セクション */
+.review{
+    width: 100%;
+    padding: 8rem 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section-header__text {
+    width: 45%;
+}
+
+.section-description{
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+.section-description + .section-description {
+    margin-top: 1rem;
+}
+
+.section-header__img {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-header__text {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .section-header__img {
+        display: none;
+    }
+    
+}
+
+.review__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.review__example-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.review__example-block--reverse {
+    flex-direction: row-reverse;
+}
+
+.review__example-img {
+    width: 30rem;
+    height: 30rem;
+}
+
+.review__example-text {
+    position: relative;
+    width: 50%;
+    padding: 2rem;
+    border: 10px solid var(--accent-color);
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    color: var(--text-color-sub);
+    background-color: var(--bg-color-white);
+}
+
+/* 吹き出しの三角形（左向き） */
+.review__example-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(-2rem - 10px); /* 吹き出しの位置調整(パディングとボーダー幅) */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid transparent;
+    border-right: 2rem solid var(--accent-color);
+    z-index: 2;
+}
+
+/* reverseクラスの場合は右向きの三角形 */
+.review__example-block--reverse .review__example-text::after {
+    left: auto;
+    right: calc(-2rem - 10px); /* 吹き出しの位置調整(パディングとボーダー幅) */
+    border-right: none;
+    border-left: 2rem solid var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+    .review__content {
+        gap: 2rem;
+    }
+
+    .review__example-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .review__example-img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .review__example-text {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .review__example-text::after {
+        top: calc(-1.5rem - 10px);
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translateX(-50%);
+        border-top: none;
+        border-bottom: 1.5rem solid var(--accent-color);
+        border-left: 1.5rem solid transparent;
+        border-right: 1.5rem solid transparent;
+    }
+
+    /* レスポンシブでreverseクラスも同じ上向き吹き出しに */
+    .review__example-block--reverse .review__example-text::after {
+        top: calc(-1.5rem - 10px);
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translateX(-50%);
+        border-top: none;
+        border-bottom: 1.5rem solid var(--accent-color);
+        border-left: 1.5rem solid transparent;
+        border-right: 1.5rem solid transparent;
+    }
+
+    
+    
+}
+
+
+
 /* Q&Aセクション */
 .faq {
     width: 100%;
@@ -133,6 +292,13 @@ nav ul li {
     font-weight: normal;
 }
 
+@media screen and (max-width: 768px) {
+    .section-title__sub {
+        font-size: 1.6rem;
+    }
+    
+}
+
 .faq__slider {
     width: 100vw;
     margin-left: calc(50% - 50vw);
@@ -141,6 +307,7 @@ nav ul li {
 
 .faq__slide {
     width: 30rem;
+    height: 40rem;
     margin: 0 2rem;
     padding: 2rem;
     border: 10px solid var(--accent-color);
@@ -181,6 +348,7 @@ nav ul li {
 
 .section-title {
     font-size: 6.4rem;
+    line-height: 1.2;
 }
 
 .entry .section-title {
@@ -258,7 +426,7 @@ nav ul li {
     border-radius: 50%;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:768px) {
     .entry {
         padding: 3rem 2rem;
     }
@@ -274,8 +442,8 @@ nav ul li {
     }
 
     .entry__img {
-        width: 25rem;
-        height: 20rem;
+        width: 90%;
+        height: auto;
     }
 
     .entry__button-block {
@@ -292,7 +460,6 @@ nav ul li {
         width: 3.5rem;
         height: 3.8rem;
     }
-    
 }
 
 
