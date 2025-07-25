@@ -4,7 +4,7 @@ $(document).ready(function() {
         slidesToShow: 3,        // デスクトップで4枚表示
         slidesToScroll: 1,      // 1枚ずつスクロール
         autoplay: true,         // 自動再生
-        autoplaySpeed: 3000,    // 3秒間隔
+        autoplaySpeed: 6000,    // 6秒間隔
         infinite: true,         // 無限ループ
         centerMode: true,      // センターモード有効
         centerPadding: '15%',   // センターモードのパディング

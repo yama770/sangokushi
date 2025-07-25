@@ -72,6 +72,126 @@ li{
 }
 
 /* ボタン */
+.button {
+    width: 100%;
+    height: auto;
+}
+
+.button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding: 0 2rem;
+    text-align: center;
+    color: var(--text-color-sub);
+    background-color: var(--text-color);
+    font-size: 2.4rem;
+    line-height: 2;
+    border-radius: 9999px;
+    transition: background-color .2s, color .2s;
+}
+
+.button a:hover {
+    background-color: var(--accent-color);
+}
+
+.button a span{
+    position: relative;
+    display: inline-block;
+    padding-left: 4rem;
+}
+
+.button a span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.8rem;
+    height: 4.5rem;
+    background: url(../img/avatar-ponite.png) no-repeat center center / cover;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .button a {
+        font-size: 2rem;
+        height: 4.5rem;
+    }
+
+    .button a span::before {
+        width: 3.5rem;
+        height: 3.8rem;
+    }
+}
+
+/* セクションの共通部分 */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section-header__img {
+    width: 50%;
+}
+
+.section-header__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.section-header__text {
+    width: 45%;
+}
+
+.section-title {
+    font-size: 6.4rem;
+    line-height: 1.2;
+}
+
+.section-title__sub {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: normal;
+}
+
+.section-description {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+.section-description + .section-description {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-header__text {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .section-header__img {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 3.6rem;
+    }
+    
+    .section-title__sub {
+        font-size: 1.6rem;
+    }
+}
 
 
 /* ヘッダー */
@@ -92,52 +212,20 @@ header nav {
 
 
 
+/* オンラインイベントセクション */
+.event {
+    width: 100%;
+    padding: 8rem 2rem;
+}
 
+.event .section-header{
+    flex-direction: row-reverse;
+}
 
 /* 参加者の声セクション */
 .review{
     width: 100%;
     padding: 8rem 2rem;
-}
-
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.section-header__text {
-    width: 45%;
-}
-
-.section-description{
-    font-size: 1.6rem;
-    margin-top: 2rem;
-}
-
-.section-description + .section-description {
-    margin-top: 1rem;
-}
-
-.section-header__img {
-    width: 50%;
-}
-
-@media screen and (max-width: 768px) {
-    .section-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section-header__text {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-
-    .section-header__img {
-        display: none;
-    }
-    
 }
 
 .review__content {
@@ -220,6 +308,7 @@ header nav {
         font-size: 1.4rem;
     }
 
+    /* 吹き出しの三角形を上向きに変更 */
     .review__example-text::after {
         top: calc(-1.5rem - 10px);
         left: 50%;
@@ -232,7 +321,7 @@ header nav {
         border-right: 1.5rem solid transparent;
     }
 
-    /* レスポンシブでreverseクラスも同じ上向き吹き出しに */
+    /* reverseクラスも同じ上向き吹き出しに */
     .review__example-block--reverse .review__example-text::after {
         top: calc(-1.5rem - 10px);
         left: 50%;
@@ -243,31 +332,13 @@ header nav {
         border-bottom: 1.5rem solid var(--accent-color);
         border-left: 1.5rem solid transparent;
         border-right: 1.5rem solid transparent;
-    }
-
-    
-    
+    } 
 }
-
-
 
 /* Q&Aセクション */
 .faq {
     width: 100%;
     padding: 8rem 2rem;
-}
-
-.section-title__sub {
-    display: block;
-    font-size: 2.4rem;
-    font-weight: normal;
-}
-
-@media screen and (max-width: 768px) {
-    .section-title__sub {
-        font-size: 1.6rem;
-    }
-    
 }
 
 .faq__slider {
@@ -310,16 +381,10 @@ header nav {
     margin-top: 1rem;
 }
 
-
 /* エントリーセクション */
 .entry {
     width: 100%;
     padding: 4rem 2rem;
-}
-
-.section-title {
-    font-size: 6.4rem;
-    line-height: 1.2;
 }
 
 .entry .section-title {
@@ -356,54 +421,9 @@ header nav {
     gap: 1rem;
 }
 
-.button {
-    width: 100%;
-    height: auto;
-}
-
-.button a {
-    display: block;
-    width: 100%;
-    height: 5rem;
-    padding: 0 2rem;
-    text-align: center;
-    color: var(--text-color-sub);
-    background-color: var(--text-color);
-    font-size: 2.4rem;
-    line-height: 2;
-    border-radius: 9999px;
-    transition: background-color .2s, color .2s;
-}
-
-.button a:hover {
-    background-color: var(--accent-color);
-}
-
-.button a span{
-    position: relative;
-    display: inline-block;
-    padding-left: 4rem;
-}
-
-.button a span::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3.8rem;
-    height: 4.5rem;
-    background: url(../img/avatar-ponite.png) no-repeat center center / cover;
-    border-radius: 50%;
-}
-
 @media screen and (max-width:768px) {
     .entry {
         padding: 3rem 2rem;
-    }
-
-    .section-title {
-        font-size: 3.6rem;
     }
 
     .entry__content {
@@ -418,26 +438,14 @@ header nav {
     }
 
     .entry__button-block {
-        width: 100%;
-        max-width: 30rem;
-    }
-
-    .button a {
-        font-size: 2rem;
-        height: 4.5rem;
-    }
-
-    .button a span::before {
-        width: 3.5rem;
-        height: 3.8rem;
+        width: 90%;
     }
 }
-
 
 /* フッター */
 .footer {
     width: 100%;
-    padding: 4rem 2rem 2rem;
+    padding: 4rem 2rem 1rem;
 }
 
 .footer__content {
@@ -519,31 +527,6 @@ header nav {
     .footer__text {
         font-size: 0.8rem;
     }
-}
-
-
-
-
-
-/* 
---------------------------
-howto-use-page
---------------------------
- */
-
-#support {
-    height: 100vh;
-}
-
-
-.support__students {
-    margin-top: 10rem;
-    font-size: 6.4rem;
-}
-
-.support__students-img {
-    width: 90%;
-    border: 1px solid red;
 }
 
 
