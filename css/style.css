@@ -117,8 +117,9 @@ li{
 
 @media screen and (max-width: 768px) {
     .button a {
-        font-size: 2rem;
         height: 4.5rem;
+        padding: 0;
+        font-size: 2rem;
     }
 
     .button a span::before {
@@ -220,6 +221,159 @@ header nav {
 
 .event .section-header{
     flex-direction: row-reverse;
+}
+
+.event__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 1.5rem;
+    column-gap: 3rem;
+    grid-template-areas: 
+        "premium contest drinking"
+        "premium contest beginner";
+    margin-top: 6rem;
+}
+
+.event__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 8px solid var(--accent-color);
+    color: var(--text-color-sub);
+    background: var(--bg-color-white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event__item--premium {
+    grid-area: premium;
+}
+
+.event__item--contest {
+    grid-area: contest;
+}
+
+.event__item--drinking {
+    grid-area: drinking;
+}
+
+.event__item--beginner {
+    grid-area: beginner;
+}
+
+.event__header {
+    text-align: center;
+}
+
+.event__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.event__schedule {
+    font-size: 2rem;
+}
+
+.event__participants {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.event__participants-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    font-size: 2rem;
+}
+
+.event__participants-count {
+    position: relative;
+    display: inline-block;
+    font-size: 6.4rem;
+    line-height: 1.8;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 1024px) {
+    .event__content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "premium contest"
+            "drinking beginner";
+    }
+    
+    .event__item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .event__title {
+        font-size: 2.8rem;
+    }
+    
+    .event__schedule {
+        font-size: 1.8rem;
+    }
+    
+    .event__participants-count {
+        padding-top: .5rem;
+        font-size: 4.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .event__content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        grid-template-areas: 
+            "premium"
+            "contest"
+            "drinking"
+            "beginner";
+    }
+    
+    .event__item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .event__title {
+        font-size: 3.2rem;
+    }
+    
+    .event__schedule {
+        font-size: 2rem;
+    }
+    
+    .event__participants-count {
+        font-size: 5.6rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .event__item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .event__title {
+        font-size: 2.4rem;
+    }
+    
+    .event__schedule {
+        font-size: 1.6rem;
+    }
+    
+    .event__participants-label {
+        font-size: 1.4rem;
+    }
+    
+    .event__participants-count {
+        font-size: 4.8rem;
+        line-height: 1.5;
+    }
 }
 
 /* 参加者の声セクション */
