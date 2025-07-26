@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Meta Leaf 使い方ガイド - さんごくし2.0</title>
-    <meta name="description" content="Meta Leafの効率的な使い方をステップごとに詳しく解説します。プログラミング学習を加速させる活用法をご紹介。" />
-    <meta name="keywords" content="Meta Leaf, 使い方, プログラミング学習, コミュニティ, 活用法" />
+    <title>さんごくし2.0</title>
+    <meta name="description" content="さんごくし2.0は、Meta leafを紹介するためのサイトです。" />
+    <meta name="keywords" content="Meta leaf, Webサイト, ポートフォリオ" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/favicon.ico" />
     <!-- google fonts -->
@@ -19,29 +19,31 @@
     <!-- slick css -->
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/slick-theme.css" />
-    <!-- base css -->
+    <!-- custom css -->
+    <!-- 共通 -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- page specific css -->
+    <!-- ページ専用-->
     <link rel="stylesheet" href="css/guide.css" />
 </head>
 
 <body>
-    <header class="wrapper__header inner">
+    <header id="inner">
         <h1 class="site-title">
-            <a href="index.html"><img src="img/logo.svg" alt="Meta Leaf" /></a>
+            <a href="#"><img src="img/logo.svg" alt="Meta Leaf logo" /></a>
         </h1>
-        <nav>
-            <ul class="navi">
-                <li><a href="index.html">TOP</a></li>
-                <li><a href="#MetaStep01">Meta Leaf</a></li>
-                <li><a href="index.html#event">Event's</a></li>
-                <li><a href="index.html#faq">Q&A</a></li>
+
+        <nav class="header-nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">TOP</a></li>
+                <li class="header__nav-item"><a href="#">Meta Leaf</a></li>
+                <li class="header__nav-item"><a href="#">EVENT's</a></li>
+                <li class="header__nav-item"><a href="#">Q&A</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="support">
+        <section id="support inner">
             <h3 class="support__students">サポート生紹介</h3>
             <div class="support__students-img">
                 <img src="img/support01.png" alt="サポート生アイコン画像01">
@@ -56,44 +58,44 @@
             </p>
         </section>
 
-        <section id="MetaStep01">
+        <section id="MetaStep01" class="MetaStep__bg-color inner">
             <div class="MetaStep__left">
                 <p class="MetaStep__subtitle">Meta Step</p>
                 <h2 class="MetaStep__title">01</h2>
                 <h3 class="MetaStep__visitors">はじめての方へ</h3>
+                <p class="MetaStep__text01">
+                    メタリーフにはプログラミングを学んでいる仲間がたくさんいます。
+                    将来への目的は違いますが、プログラミングを学び現状を変えたいという意味では、
+                    皆同じ目的で集まっています。一人でpcに向かって勉強するよりも、
+                    仲間と助け合ったり、共有し合い学ぶ事で技術も知識も吸収され案件獲得も現実になります。<br>
+                    助け合い、高めあう仲間たちがあなたの参加を待っています。
+                </p>
             </div>
-            <p class="MetaStep__text01">
-                メタリーフにはプログラミングを学んでいる仲間がたくさんいます。
-                将来への目的は違いますが、プログラミングを学び現状を変えたいという意味では、
-                皆同じ目的で集まっています。一人でpcに向かって勉強するよりも、
-                仲間と助け合ったり、共有し合い学ぶ事で技術も知識も吸収され案件獲得も現実になります。<br>
-                助け合い、高めあう仲間たちがあなたの参加を待っています。
-            </p>
             <div class="MetaStep__right">
                 <img src="img/meta-step01.png" alt="実際の作業会の様子の画像">
             </div>
         </section>
 
-        <section id="MetaStep02">
+        <section id="MetaStep02" class="MetaStep__bg-color inner">
             <div class="MetaStep__left">
                 <p class="MetaStep__subtitle">Meta Step</p>
                 <h2 class="MetaStep__title">02</h2>
                 <h3 class="MetaStep__goto-gate">入室の流れ</h3>
+                <dl class="MetaStep__text02">
+                    <dt>STEP1：</dt>
+                    <dd>利用登録(公式LINEから行います)</dd>
+                    <dt>STEP2：</dt>
+                    <dd>さっそくMeta Lifeへ入ろう(公式LINEから入室できます!ドキドキ!)<br>名前とアバターを設定します</dd>
+                    <dt>STEP3：</dt>
+                    <dd>名前に😢マークを入れて「初心者の方専用部屋」へGO!!</dd>
+                </dl>
             </div>
-            <dl class="MetaStep__text02">
-                <dt>STEP1：</dt>
-                <dd>利用登録(公式LINEから行います)</dd>
-                <dt>STEP2：</dt>
-                <dd>さっそくMeta Lifeへ入ろう(公式LINEから入室できます!ドキドキ!)<br>名前とアバターを設定します</dd>
-                <dt>STEP3：</dt>
-                <dd>名前に😢マークを入れて「初心者の方専用部屋」へGO!!</dd>
-            </dl>
             <div class="MetaStep__right">
                 <img src="img/meta-step02.png" alt="初心者の方専用部屋の画像">
             </div>
         </section>
 
-        <section id="MetaStep03">
+        <section id="MetaStep03" class="MetaStep__bg-color inner">
             <div class="MetaStep__left">
                 <p class="MetaStep__subtitle">Meta Step</p>
                 <h2 class="MetaStep__title">03</h2>
@@ -130,7 +132,7 @@
             </div>
         </section>
 
-        <section class="entry inner">
+        <section id="MetaStepentry" class="entry inner MetaStep__bg-color-entry">
             <h2 class="section-title">
                 切磋琢磨できる<br class="sp">仲間と出会おう！
             </h2>
@@ -151,20 +153,23 @@
         </section>
     </main>
 
-    <footer class="footer inner">
+    <footer class="footer inner MetaStep__bg-color-footer">
         <div class="footer__content">
             <div class="footer__logo">
                 <img src="img/logo.svg" alt="meta leaf logo">
             </div>
+
             <nav class="footer__nav">
                 <ul class="footer__nav-list">
-                    <li class="footer__nav-item"><a href="index.html">TOP</a></li>
-                    <li class="footer__nav-item"><a href="#MetaStep01">Meta Leaf</a></li>
-                    <li class="footer__nav-item"><a href="index.html#event">EVENT's</a></li>
-                    <li class="footer__nav-item"><a href="index.html#faq">Q&A</a></li>
+                    <li class="footer__nav-item"><a href="#">TOP</a></li>
+                    <li class="footer__nav-item"><a href="#">Meta Leaf</a></li>
+                    <li class="footer__nav-item"><a href="#">EVENT's</a></li>
+                    <li class="footer__nav-item"><a href="#">Q&A</a></li>
                 </ul>
             </nav>
+
         </div>
+
         <div class="footer__info">
             <p class="footer__text">© 2023 Meta Leaf All Rights Reserved.</p>
             <p class="footer__text">このサイトは、Meta leafを紹介するためのサイトです。</p>
