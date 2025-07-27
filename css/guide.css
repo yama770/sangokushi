@@ -7,8 +7,20 @@ Meta Leaf Usage Guide Page
 
 
 * {
-    /* border: 1px solid; */
+    border: 1px solid;
 }
+
+body{
+    /* max-width: 1440px; */
+    /* width: 100vw; */
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-size: 100%;
+    line-height: 1.5;
+    letter-spacing: .03em;
+    /* background: var(--main-color); */
+}
+
 
 
 /* 
@@ -17,9 +29,17 @@ Meta Step セクション共通
 --------------------------
 */
 
+#support
+#MetaStep01
+#MetaStep02
+#MetaStep03
+#MetaStepentry {
+    height: 100%;
+}
 
 .MetaStep__bg-color  {
     background-image: linear-gradient(#69bfab, #345f55 50%);
+    border: 1px solid;
 }
 
 .MetaStep__bg-color-entry {
@@ -28,6 +48,10 @@ Meta Step セクション共通
 
 .MetaStep__bg-color-footer  {
     background-image: linear-gradient(#345f55, #69bfab 80%);
+}
+
+.MetaStep__box {
+    display: flex;
 }
 
 .MetaStep__subtitle {
@@ -67,8 +91,8 @@ Meta Step セクション共通
 
 .support__students-img {
     width: 90%;
-    margin: 0 auto;
-    /* border: 1px solid red; */
+    margin: 10rem auto;
+    border: 1px solid #69bfab;
 }
 
 .support__students-img img {
