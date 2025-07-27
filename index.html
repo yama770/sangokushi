@@ -23,6 +23,38 @@
 </head>
 
 <body>
+  <!-- ローディングアニメーション -->
+  <div id="loading" class="loading">
+    <div class="loading__portal">
+      <div class="loading__portal-ring loading__portal-ring--1"></div>
+      <div class="loading__portal-ring loading__portal-ring--2"></div>
+      <div class="loading__portal-ring loading__portal-ring--3"></div>
+      <div class="loading__portal-center">
+        <img src="img/logo.svg" alt="Meta Leaf" class="loading__logo">
+        <div class="loading__text">
+          <span class="loading__text-char">M</span>
+          <span class="loading__text-char">e</span>
+          <span class="loading__text-char">t</span>
+          <span class="loading__text-char">a</span>
+          <span class="loading__text-char"> </span>
+          <span class="loading__text-char">L</span>
+          <span class="loading__text-char">e</span>
+          <span class="loading__text-char">a</span>
+          <span class="loading__text-char">f</span>
+        </div>
+        <div class="loading__subtitle">へようこそ</div>
+      </div>
+    </div>
+    <div class="loading__particles">
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+    </div>
+  </div>
+
   <header id="inner">
     <h1 class="site-title">
       <a href="#"><img src="img/logo.svg" alt="Meta Leaf logo" /></a>
@@ -107,6 +139,58 @@
 
         <div class="section-header__img">
           <img src="img/kouritsu_main.png" alt="Meta Leaf内の画像">
+        </div>
+      </div>
+
+      <div class="use__slider">
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide01.png" alt="もくもくブースの画像" />
+          </div>
+          <h3 class="use__slide-title">一人で集中したいとき</h3>
+          <p class="use__slide-text">
+            集中して作業したい時には一人部屋のスペースを活用しましょう！
+          </p>
+        </div>
+
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide02.png" alt="もくもくブースの画像" />
+          </div>
+          <h3 class="use__slide-title">集中したいとき</h3>
+          <p class="use__slide-text">
+            集中したいけど、仲間が欲しい時の<br>部屋も準備してあります！
+          </p>
+        </div>
+
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide03.png" alt="フリースペースの画像" />
+          </div>
+          <h3 class="use__slide-title">フリースペース</h3>
+          <p class="use__slide-text">
+            何気ない会話からヒントがもらえる、<br>そんな場所。
+          </p>
+        </div>
+
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide04.png" alt="案件獲得質問部屋の画像" />
+          </div>
+          <h3 class="use__slide-title">案件獲得質問部屋</h3>
+          <p class="use__slide-text">
+              案件のお悩みはみんなの悩み！<br>一緒に解決していきましょう！
+          </p>
+        </div>
+
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide05.png" alt="レベル別質問部屋の画像" />
+          </div>
+          <h3 class="use__slide-title">レベル別質問部屋</h3>
+          <p class="use__slide-text">
+            同じレベル感で悩みの相談が気軽にできます！
+          </p>
         </div>
       </div>
     </section>
@@ -336,6 +420,9 @@
         <p class="footer__text">このサイトは、Meta leafを紹介するためのサイトです。</p>
       </div>
     </footer>
+
+  <!-- 上に戻るボタン -->
+  <div class="page-top" id="pageTop"></div>
 
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/slick.min.js"></script>
