@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>さんごくし2.0</title>
-    <meta
-      name="description"
-      content="さんごくし2.0は、Meta leafを紹介するためのサイトです。"
-    />
-    <meta name="keywords" content="Meta leaf, Webサイト, ポートフォリオ" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.ico" />
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaisei+Opti&family=Kiwi+Maru&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sawarabi+Gothic&family=Sawarabi+Mincho&family=Shippori+Mincho&family=Yusei+Magic&display=swap"
-      rel="stylesheet"
-    />
-    <!-- reset css -->
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <!-- slick css -->
-    <link rel="stylesheet" href="css/slick.css" />
-    <link rel="stylesheet" href="css/slick-theme.css" />
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>さんごくし2.0</title>
+  <meta name="description" content="さんごくし2.0は、Meta leafを紹介するためのサイトです。" />
+  <meta name="keywords" content="Meta leaf, Webサイト, ポートフォリオ" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/favicon.ico" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaisei+Opti&family=Kiwi+Maru&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sawarabi+Gothic&family=Sawarabi+Mincho&family=Shippori+Mincho&family=Yusei+Magic&display=swap"
+    rel="stylesheet" />
+  <!-- reset css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <!-- slick css -->
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="css/slick-theme.css" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-  <body>
-    <header id="inner">
-      <h1 class="site-title">
-        <a href="#"><img src="img/logo.svg" alt="Meta Leaf logo" /></a>
-      </h1>
-
-      <nav class="header-nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="#">TOP</a></li>
-          <li class="header__nav-item"><a href="#">Meta Leaf</a></li>
-          <li class="header__nav-item"><a href="#">EVENT's</a></li>
-          <li class="header__nav-item"><a href="#">Q&A</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="mainvisual">
-      <img src="img/mv_bg.png" alt="メインビジュアルの画像" />
+<body>
+  <!-- ローディングアニメーション -->
+  <div id="loading" class="loading">
+    <div class="loading__portal">
+      <div class="loading__portal-ring loading__portal-ring--1"></div>
+      <div class="loading__portal-ring loading__portal-ring--2"></div>
+      <div class="loading__portal-ring loading__portal-ring--3"></div>
+      <div class="loading__portal-center">
+        <img src="img/logo.svg" alt="Meta Leaf" class="loading__logo">
+        <div class="loading__text">
+          <span class="loading__text-char">M</span>
+          <span class="loading__text-char">e</span>
+          <span class="loading__text-char">t</span>
+          <span class="loading__text-char">a</span>
+          <span class="loading__text-char"> </span>
+          <span class="loading__text-char">L</span>
+          <span class="loading__text-char">e</span>
+          <span class="loading__text-char">a</span>
+          <span class="loading__text-char">f</span>
+        </div>
+        <div class="loading__subtitle">へようこそ</div>
+      </div>
     </div>
+    
+    <div class="loading__particles">
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+      <div class="loading__particle"></div>
+    </div>
+  </div>
 
-    <div class="mainvisual_photo">
-      <div class="pumpkin-photo01">
+  <header id="inner">
+    <h1 class="site-title">
+      <a href="#"><img src="img/logo.svg" alt="Meta Leaf logo" /></a>
+    </h1>
+
+    <nav class="header-nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#">TOP</a></li>
+        <li class="header__nav-item"><a href="#">Meta Leaf</a></li>
+        <li class="header__nav-item"><a href="#">EVENT's</a></li>
+        <li class="header__nav-item"><a href="#">Q&A</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="mainvisual">
+    <img src="img/mv_bg.png" alt="メインビジュアルの画像" />
+  </div>
+
+  <div class="mainvisual_photo">
+    <div class="mainvisual_photo__mainvisual_photo01">
+      <div class="pumpkin-photo">
         <img src="img/mv_pumpkin01.png" alt="パンプキンアバターの画像" />
       </div>
       <div class="pumpkin-photo02">
@@ -97,7 +127,7 @@
               <span class="section-title__sub">Meta Leafの使い方</span>
               効率的な活用法
             </h2>
-
+            
             <p class="section-description">
               プログラミングを勉強している方も、これから勉強するんだっていう方も大丈夫。はじめての方から勉強を続けてきた方まですべての人にぴったりな使い方が必ずあります！
             </p>
@@ -105,34 +135,81 @@
             <p class="section-description">
               あなたにぴったり使い方を見つけて学習を加速させましょう！
             </p>
-          </div>
-
-          <div class="section-header__img">
-            <img src="img/kouritsu_main.png" alt="Meta Leaf内の画像" />
-          </div>
+           </div>
+            
+           <div class="section-header__img">
+             <img src="img/kouritsu_main.png" alt="Meta Leaf内の画像">
+           </div>
         </div>
-      </section>
 
-      <section class="event inner">
-        <div class="section-header">
-          <div class="section-header__text">
-            <h2 class="section-title">
-              <span class="section-title__sub">こんなイベントやってます！</span>
-              オンライン<br />イベント情報
-            </h2>
-
-            <p class="section-description">
-              メタリーフではいろいろなオンラインイベントを開催しています！
-            </p>
-
-            <p class="section-description">
-              成長のきっかけになるセミナーや、チーム開発を経験できるコンテスト、交流を深めるためのオンライン飲み会など様々なイベントが盛り沢山！
-            </p>
+      <div class="use__slider">
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide01.png" alt="もくもくブースの画像" />
           </div>
+          <h3 class="use__slide-title">一人で集中したいとき</h3>
+          <p class="use__slide-text">
+            集中して作業したい時には一人部屋のスペースを活用しましょう！
+          </p>
+        </div>
 
-          <div class="section-header__img">
-            <img src="img/event_main.png" alt="イベントの画像" />
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide02.png" alt="もくもくブースの画像" />
           </div>
+          <h3 class="use__slide-title">集中したいとき</h3>
+          <p class="use__slide-text">
+            集中したいけど、仲間が欲しい時の<br>部屋も準備してあります！
+          </p>
+        </div>
+
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide03.png" alt="フリースペースの画像" />
+          </div>
+          <h3 class="use__slide-title">フリースペース</h3>
+          <p class="use__slide-text">
+            何気ない会話からヒントがもらえる、<br>そんな場所。
+          </p>
+        </div>
+
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide04.png" alt="案件獲得質問部屋の画像" />
+          </div>
+          <h3 class="use__slide-title">案件獲得質問部屋</h3>
+          <p class="use__slide-text">
+              案件のお悩みはみんなの悩み！<br>一緒に解決していきましょう！
+          </p>
+        </div>
+
+        <div class="use__slide">
+          <div class="use__slide-img">
+            <img src="img/kouritsu_slide05.png" alt="レベル別質問部屋の画像" />
+          </div>
+          <h3 class="use__slide-title">レベル別質問部屋</h3>
+          <p class="use__slide-text">
+            同じレベル感で悩みの相談が気軽にできます！
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="event inner">
+      <div class="section-header">
+        <div class="section-header__text">
+          <h2 class="section-title">
+            <span class="section-title__sub">こんなイベントやってます！</span>
+            オンライン<br>イベント情報
+          </h2>
+
+          <p class="section-description">
+            メタリーフではいろいろなオンラインイベントを開催しています！
+          </p>
+
+          <p class="section-description">
+            成長のきっかけになるセミナーや、チーム開発を経験できるコンテスト、交流を深めるためのオンライン飲み会など様々なイベントが盛り沢山！
+          </p>
         </div>
 
         <div class="event__content">
@@ -349,10 +426,13 @@
       </div>
     </footer>
 
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  <!-- 上に戻るボタン -->
+  <div class="page-top" id="pageTop"></div>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
