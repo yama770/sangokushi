@@ -211,6 +211,85 @@ header nav {
     max-width: 100%;
 }
 
+/* --------- mainvisual ---------*/
+.mainvisual {
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.mainvisual img {
+    max-width: 100%;
+}
+
+.mainvisual_photo img {
+    width: 200px;
+}
+
+/* --------- pumpkin画像調整 ---------- */
+.pumpkin-photo01 {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.pumpkin-photo02 {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+}
+
+.pumpkin-photo03 {
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+}
+
+.pumpkin-photo04 {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.pumpkin-photo05 {
+    position: absolute;
+    top: 55%;
+    right: 10%;
+}
+
+.pumpkin-photo06 {
+    position: absolute;
+    bottom: 0%;
+    right: 10%;
+}
+
+/* --------- section overview ---------*/
+#wrapper {
+    border: 1px solid;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+section.overview {
+    margin: 100px 0;
+    padding: 2%;
+}
+
+#overview__overview-img,
+#overview__overview-textbox {
+    text-align: center;
+}
+
+#overview__overview-img {
+    margin-bottom: 30px;
+}
+
+#overview__overview-textbox p {
+    font-size: 24px;
+    letter-spacing: 3;
+}
+
+
 
 
 
