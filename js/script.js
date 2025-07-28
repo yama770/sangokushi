@@ -3,12 +3,10 @@ $(document).ready(function() {
     function initLoading() {
         const loading = $('#loading');
         const hasVisited = localStorage.getItem('metaleaf-visited');
-        // 初回訪問かどうかをlocalStorageでチェック
-        console.log('hasVisited:', hasVisited);
         
         // デバッグ用：localStorageをクリアしたい場合は下記のコメントアウトを外す
         // localStorage.removeItem('metaleaf-visited');
-        
+
         // 初回訪問の場合のみローディングを表示
         if (!hasVisited) {
             // showでローディングを表示
