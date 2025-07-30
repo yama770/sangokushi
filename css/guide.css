@@ -48,12 +48,12 @@ Meta Step セクション共通
 
 .MetaStep__box {
     display: flex;
-    height: 57rem;
+    height: 100vh;
     max-width: 1000px;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .MetaStep__subtitle {
@@ -70,19 +70,24 @@ Meta Step セクション共通
 }
 
 .MetaStep__left {
+    display: flex;
     width: 45%;
-    border: 1px solid red;
+    height: 100%;
     flex: none;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    /* border: 1px solid red; */
 }
 
 .MetaStep__right {
-    flex: none;
     width: 45%;
     height: 100%;
-    border: 1px solid greenyellow;
+    flex: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid greenyellow; */
 }
 
 
@@ -143,6 +148,11 @@ Meta Step 01セクション
     /* border: 1px solid white; */
 }
 
+#MetaStep01
+.MetaStep__left {
+    text-align: center;
+}
+
 .MetaStep__left {
     flex: none;
 }
@@ -155,7 +165,7 @@ Meta Step 01セクション
 
 .MetaStep__text01 {
     font-size: 1.6rem;
-    line-height: 1.8;
+    line-height: 2.4;
     color: var(--text-color);
     margin-bottom: 2rem;
 }
@@ -181,6 +191,19 @@ Meta Step 02セクション
     gap: 3rem;
     /* border: 1px solid white; */
 }
+
+#MetaStep02
+.MetaStep__left {
+    width: 50%;
+}
+
+#MetaStep02
+.MetaStep__subtitle, 
+.MetaStep__title, 
+.MetaStep__goto-gate {
+    margin: 0 auto;
+}
+
 
 .MetaStep__goto-gate {
     font-size: 4rem;
@@ -221,6 +244,11 @@ Meta Step 03セクション
     /* border: 1px solid white; */
 }
 
+#MetaStep03
+.MetaStep__left {
+    text-align: center;
+}
+
 .MetaStep__howto-use {
     font-size: 4rem;
     color: var(--text-color);
@@ -233,22 +261,27 @@ Meta Step 03セクション
     margin-bottom: 2rem;
 }
 
-.MetaStep__left-top,
-.MetaStep__left-bottom {
+.MetaStep__left-top {
     width: 50%;
-    margin-bottom: 2rem;
+    margin: 0 auto;
+    /* margin-bottom: 2rem; */
+    /* border: 1px solid red; */
+}
+
+.MetaStep__left-bottom {
+    margin: 0 auto;
+    width: 50%;
+    /* height: 20rem; */
+    /* border: 1px solid blue; */
 }
 
 .MetaStep__left-top img,
 .MetaStep__left-bottom img {
     width: 100%;
+    max-height: 20rem;
     height: auto;
     border-radius: 2rem;
     /* border: 1px solid orange; */
-}
-
-.MetaStep__left-bottom img {
-    height: 30rem;
 }
 
 .MetaStep__textBox03 {
@@ -300,6 +333,7 @@ Meta Step 03セクション
     #MetaStep01,
     #MetaStep02,
     #MetaStep03 {
+        width: 100%;
         flex-direction: column;
         padding: 2rem 1rem;
         gap: 2rem;
@@ -336,5 +370,18 @@ Meta Step 03セクション
     .MetaStep__text03-detail03,
     .MetaStep__text03-detail04 {
         font-size: 1.2rem;
+    }
+
+    .MetaStep__box {
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    .MetaStep__left,
+    .MetaStep__right {
+        width: 100%;
+        height: auto;
+        margin: 0;
     }
 }
