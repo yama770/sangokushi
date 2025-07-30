@@ -284,6 +284,10 @@ Meta Step 03セクション
     /* border: 1px solid orange; */
 }
 
+.MetaStep__left-bottom img {
+    height: 15rem;
+}
+
 .MetaStep__textBox03 {
     display: flex;
     flex-direction: column;
@@ -330,13 +334,43 @@ Meta Step 03セクション
         width: 100%;
     }
 
-    #MetaStep01,
+    /* #MetaStep01,
     #MetaStep02,
     #MetaStep03 {
-        width: 100%;
         flex-direction: column;
         padding: 2rem 1rem;
         gap: 2rem;
+    } */
+
+    #MetaStep01,
+    #MetaStep02,
+    #MetaStep03 {
+        height: auto;
+    }
+
+    .MetaStep__box {
+        width: 100%;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .MetaStep__left,
+    .MetaStep__right {
+        width: 100%;
+        flex: none;
+        border: none;
+        text-align: center;
+    }
+
+    #MetaStep02 .MetaStep__text02 {
+        text-align: left;
+    }
+
+    #MetaStep03 .MetaStep__left-top,
+    #MetaStep03 .MetaStep__left-bottom {
+        margin: 0 auto;
     }
 
     .MetaStep__title {
