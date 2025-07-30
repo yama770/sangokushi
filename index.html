@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
+<body id="top">
   <!-- ローディングアニメーション -->
   <div id="loading" class="loading">
     <div class="loading__portal">
@@ -58,15 +58,17 @@
 
   <header id="inner">
     <h1 class="site-title">
-      <a href="#"><img src="img/logo.svg" alt="Meta Leaf logo" /></a>
+      <a href="#top"><img src="img/logo.svg" alt="Meta Leaf logo" /></a>
     </h1>
 
     <nav class="header-nav">
       <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="#">TOP</a></li>
-        <li class="header__nav-item"><a href="#">Meta Leaf</a></li>
-        <li class="header__nav-item"><a href="#">EVENT's</a></li>
-        <li class="header__nav-item"><a href="#">Q&A</a></li>
+        <li class="header__nav-item"><a href="#top">TOP</a></li>
+        <li class="header__nav-item"><a href="#overview">Meta Leaf</a></li>
+        <li class="header__nav-item"><a href="#use">How to</a></li>
+        <li class="header__nav-item"><a href="#event">EVENT's</a></li>
+        <li class="header__nav-item"><a href="#review">Review</a></li>
+        <li class="header__nav-item"><a href="#faq">Q&A</a></li>
       </ul>
     </nav>
   </header>
@@ -99,51 +101,51 @@
     </div>
   </div>
 
-    <main>
-      <section class="overview">
-        <h2 class="section-title">
-          メタリーフって何？
-          <span class="section-title__sub">メタリーフについて</span>
-        </h2>
+  <main>
+    <section id="overview" class="overview scroll-animation">
+      <h2 class="section-title">
+        <span class="section-title__sub">メタリーフについて</span>
+        メタリーフって何？
+      </h2>
 
-        <div class="wrapper">
-          <div id="overview__overview-img">
-            <img src="img/group.png" alt="アバターが集合している画像" />
-          </div>
-
-          <div id="overview__overview-textbox">
-            <p id="overview__overview-texts">
-              メタリーフはプログラミング学習者のためのオンラインコミュニティ<br />
-              お互いに助け合い高めあうことができます<br />
-              素敵な仲間と出会うことができる最高の場所です
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="use">
-        <div class="section-header inner">
-          <div class="section-header__text">
-            <h2 class="section-title">
-              <span class="section-title__sub">Meta Leafの使い方</span>
-              効率的な活用法
-            </h2>
-            
-            <p class="section-description">
-              プログラミングを勉強している方も、これから勉強するんだっていう方も大丈夫。はじめての方から勉強を続けてきた方まですべての人にぴったりな使い方が必ずあります！
-            </p>
-
-            <p class="section-description">
-              あなたにぴったり使い方を見つけて学習を加速させましょう！
-            </p>
-           </div>
-            
-           <div class="section-header__img">
-             <img src="img/kouritsu_main.png" alt="Meta Leaf内の画像">
-           </div>
+      <div class="wrapper">
+        <div id="overview__overview-img" class="scroll-animation">
+          <img src="img/group.png" alt="アバターが集合している画像" />
         </div>
 
-      <div class="use__slider">
+        <div id="overview__overview-textbox" class="scroll-animation">
+          <p id="overview__overview-texts">
+            メタリーフはプログラミング学習者のためのオンラインコミュニティ<br />
+            お互いに助け合い高めあうことができます<br />
+            素敵な仲間と出会うことができる最高の場所です
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="use" class="use scroll-animation">
+      <div class="section-header inner">
+        <div class="section-header__text scroll-animation">
+          <h2 class="section-title">
+            <span class="section-title__sub">Meta Leafの使い方</span>
+            効率的な活用法
+          </h2>
+          
+          <p class="section-description">
+            プログラミングを勉強している方も、これから勉強するんだっていう方も大丈夫。はじめての方から勉強を続けてきた方まですべての人にぴったりな使い方が必ずあります！
+          </p>
+
+          <p class="section-description">
+            あなたにぴったり使い方を見つけて学習を加速させましょう！
+          </p>
+        </div>
+        
+        <div class="section-header__img scroll-animation delay-300">
+          <img src="img/kouritsu_main.png" alt="Meta Leaf内の画像">
+        </div>
+      </div>
+
+      <div class="use__slider scroll-animation delay-200">
         <div class="use__slide">
           <div class="use__slide-img">
             <img src="img/kouritsu_slide01.png" alt="もくもくブースの画像" />
@@ -180,7 +182,7 @@
           </div>
           <h3 class="use__slide-title">案件獲得質問部屋</h3>
           <p class="use__slide-text">
-              案件のお悩みはみんなの悩み！<br>一緒に解決していきましょう！
+            案件のお悩みはみんなの悩み！<br>一緒に解決していきましょう！
           </p>
         </div>
 
@@ -196,9 +198,9 @@
       </div>
     </section>
 
-    <section class="event inner">
+    <section id="event" class="event inner scroll-animation">
       <div class="section-header">
-        <div class="section-header__text">
+        <div class="section-header__text scroll-animation delay-300">
           <h2 class="section-title">
             <span class="section-title__sub">こんなイベントやってます！</span>
             オンライン<br>イベント情報
@@ -213,223 +215,225 @@
           </p>
         </div>
 
-          <div class="section-header__img">
-            <img src="img/event_main.png" alt="セミナーイベントの画像" />
-          </div>
+        <div class="section-header__img scroll-animation">
+          <img src="img/event_main.png" alt="セミナーイベントの画像" />
+        </div>
       </div>
 
-        <div class="event__content">
-          <div class="event__item event__item--premium">
-            <div class="event__header">
-              <h2 class="event__title">プレミアム作業会</h2>
-              <p class="event__schedule">毎週火曜日開催！</p>
-            </div>
-
-            <div class="event__participants">
-              <p class="event__participants-count">
-                <span class="event__participants-label">参加者数</span>約100名
-              </p>
-            </div>
+        <div class="event__content scroll-animation delay-200">
+        <div class="event__item event__item--premium scroll-animation delay-300">
+          <div class="event__header">
+            <h2 class="event__title">プレミアム作業会</h2>
+            <p class="event__schedule">毎週火曜日開催！</p>
           </div>
 
-          <div class="event__item event__item--contest">
-            <div class="event__header">
-              <h2 class="event__title">HP制作コンテスト</h2>
-              <p class="event__schedule">定期開催！</p>
-            </div>
-
-            <div class="event__participants">
-              <p class="event__participants-count">
-                <span class="event__participants-label">参加者数</span>約80名
-              </p>
-            </div>
-          </div>
-
-          <div class="event__item event__item--drinking">
-            <div class="event__header">
-              <h2 class="event__title">オンライン飲み会</h2>
-              <p class="event__schedule">定期開催！</p>
-            </div>
-          </div>
-
-          <div class="event__item event__item--beginner">
-            <div class="event__header">
-              <h2 class="event__title">初心者交流会</h2>
-              <p class="event__schedule">毎週火曜日開催！</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="review inner">
-        <div class="section-header">
-          <div class="section-header__text">
-            <h2 class="section-title">
-              <span class="section-title__sub">みんなの声集めました</span>
-              参加者の声
-            </h2>
-            <p class="section-description">
-              メタリーフに実際に参加している方に感想や体験談を聞いてみました！
-            </p>
-            <p class="section-description">
-              参加を迷っている方は、ぜひ参考にしてみてください！
-            </p>
-          </div>
-
-          <div class="section-header__img">
-            <img src="img/review_main.png" alt="参加者の画像" />
-          </div>
-        </div>
-
-        <div class="review__content">
-          <div class="review__example-block">
-            <div class="review__example-img">
-              <img src="img/avatar-hamster.png" alt="ハムスターのアバター" />
-            </div>
-            <p class="review__example-text">
-              はじめは緊張したけど、参加している方々が優しく迎え入れてくださったので、安心しました。プログラミングの話から雑談までいろいろな話ができて楽しいです！
-            </p>
-          </div>
-
-          <div class="review__example-block review__example-block--reverse">
-            <div class="review__example-img">
-              <img src="img/avatar-osage.png" alt="おさげのアバター" />
-            </div>
-            <p class="review__example-text">
-              学習の中でわからないことが出てきたときにすぐに周りの方々に質問できるので、学習が捗りました！教えてくださる方もとても分かりやすい説明で、自分もそうなっていきたいと思います！
-            </p>
-          </div>
-
-          <div class="review__example-block">
-            <div class="review__example-img">
-              <img src="img/avatar-rabbit.png" alt="ウサギのアバター" />
-            </div>
-            <p class="review__example-text">
-              モチベーションを上げるために使っています。頑張っているのは自分だけじゃないと思えるので、作業会に入ることでモチベーションを保てています。これからも利用していきたいです。
+          <div class="event__participants">
+            <p class="event__participants-count">
+              <span class="event__participants-label">参加者数</span>約100名
             </p>
           </div>
         </div>
-      </section>
 
-      <section class="faq inner">
-        <h2 class="section-title">
-          <span class="section-title__sub">その不安、解決します！</span>
-          Q&A
-        </h2>
-
-        <div class="faq__slider">
-          <div class="faq__slide">
-            <div class="faq__slide-img">
-              <img src="img/faq01.png" alt="FAQ画像1" />
-            </div>
-            <h3 class="faq__slide-title">全くの初心者でも参加できますか？</h3>
-            <p class="faq__slide-text">
-              サポートメンバーや他の参加者が丁寧にフォローします。
-            </p>
+        <div class="event__item event__item--contest scroll-animation delay-400">
+          <div class="event__header">
+            <h2 class="event__title">HP制作コンテスト</h2>
+            <p class="event__schedule">定期開催！</p>
           </div>
 
-          <div class="faq__slide">
-            <div class="faq__slide-img">
-              <img src="img/faq02.png" alt="FAQ画像2" />
-            </div>
-
-            <h3 class="faq__slide-title">
-              発言しなきゃいけませんか？黙って作業していても大丈夫？
-            </h3>
-
-            <p class="faq__slide-text">
-              「聞くだけ参加」「黙々作業」もOK。ご自身のペースで関わっていただけます。
-            </p>
-          </div>
-
-          <div class="faq__slide">
-            <div class="faq__slide-img">
-              <img src="img/faq03.png" alt="FAQ画像3" />
-            </div>
-
-            <h3 class="faq__slide-title">
-              どんな雰囲気の人が集まっていますか？
-            </h3>
-
-            <p class="faq__slide-text">
-              「悩みを共有しながら一緒に頑張ろう」というスタンスの人が多く、安心して参加できます。
-            </p>
-          </div>
-
-          <div class="faq__slide">
-            <div class="faq__slide-img">
-              <img src="img/faq04.png" alt="FAQ画像4" />
-            </div>
-
-            <h3 class="faq__slide-title">
-              いきなり参加するのは緊張します…<br />何から始めればいいですか？
-            </h3>
-
-            <p class="faq__slide-text">
-              「見るだけ」からでOK!<br />雰囲気をつかんでから、徐々に質問や交流を増やしていけますよ。
-            </p>
-          </div>
-
-          <div class="faq__slide">
-            <div class="faq__slide-img">
-              <img src="img/faq05.png" alt="FAQ画像5" />
-            </div>
-            <h3 class="faq__slide-title">質問って、どこまでしていいんですか？</h3>
-            <p class="faq__slide-text">
-              なんでもOK!<br>あなたの悩み、他の人も通ってきた悩みかも知れません。気軽に相談してくださいね！
+          <div class="event__participants">
+            <p class="event__participants-count">
+              <span class="event__participants-label">参加者数</span>約80名
             </p>
           </div>
         </div>
-      </section>
 
-      <section class="entry inner">
-        <h2 class="section-title">
-          切磋琢磨できる<br class="sp" />仲間と出会おう！
-        </h2>
-
-        <div class="entry__content">
-          <div class="entry__img">
-            <img src="img/group.png" alt="Meta Leafの仲間たち" />
-          </div>
-
-          <div class="entry__button-block">
-            <button class="button">
-              <a href="https://app.metalife.co.jp/spaces" target="_blank"
-                ><span>参加してみる</span></a
-              >
-            </button>
-
-            <button class="button">
-              <a href="guide.html"><span>具体的な使い方を見る</span></a>
-            </button>
+        <div class="event__item event__item--drinking scroll-animation delay-500">
+          <div class="event__header">
+            <h2 class="event__title">オンライン飲み会</h2>
+            <p class="event__schedule">定期開催！</p>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="footer inner">
-      <div class="footer__content">
-        <div class="footer__logo">
-          <a href="index.html"><img src="img/logo.svg" alt="meta leaf logo" /></a>
+        <div class="event__item event__item--beginner scroll-animation delay-300">
+          <div class="event__header">
+            <h2 class="event__title">初心者交流会</h2>
+            <p class="event__schedule">毎週火曜日開催！</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="review" class="review inner scroll-animation">
+      <div class="section-header">
+        <div class="section-header__text scroll-animation">
+          <h2 class="section-title">
+            <span class="section-title__sub">みんなの声集めました</span>
+            参加者の声
+          </h2>
+          <p class="section-description">
+            メタリーフに実際に参加している方に感想や体験談を聞いてみました！
+          </p>
+          <p class="section-description">
+            参加を迷っている方は、ぜひ参考にしてみてください！
+          </p>
         </div>
 
-        <nav class="footer__nav">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item"><a href="index.html">TOP</a></li>
-            <li class="footer__nav-item"><a href="#">Meta Leaf</a></li>
-            <li class="footer__nav-item"><a href="#">EVENT's</a></li>
-            <li class="footer__nav-item"><a href="#">Q&A</a></li>
-          </ul>
-        </nav>
+        <div class="section-header__img scroll-animation delay-300">
+          <img src="img/review_main.png" alt="参加者の画像" />
+        </div>
       </div>
 
-      <div class="footer__info">
-        <p class="footer__text">© 2023 Meta Leaf All Rights Reserved.</p>
-        <p class="footer__text">
-          このサイトは、Meta leafを紹介するためのサイトです。
-        </p>
+      <div class="review__content scroll-animation delay-200">
+        <div class="review__example-block scroll-animation delay-300">
+          <div class="review__example-img scroll-animation delay-300">
+            <img src="img/avatar-hamster.png" alt="ハムスターのアバター" />
+          </div>
+          <p class="review__example-text scroll-animation scale delay-500">
+            はじめは緊張したけど、参加している方々が優しく迎え入れてくださったので、安心しました。プログラミングの話から雑談までいろいろな話ができて楽しいです！
+          </p>
+        </div>
+
+        <div class="review__example-block review__example-block--reverse scroll-animation delay-400">
+          <div class="review__example-img scroll-animation delay-300">
+            <img src="img/avatar-osage.png" alt="おさげのアバター" />
+          </div>
+          <p class="review__example-text scroll-animation scale-reverse delay-500">
+            学習の中でわからないことが出てきたときにすぐに周りの方々に質問できるので、学習が捗りました！教えてくださる方もとても分かりやすい説明で、自分もそうなっていきたいと思います！
+          </p>
+        </div>
+
+        <div class="review__example-block scroll-animation delay-500">
+          <div class="review__example-img scroll-animation delay-300">
+            <img src="img/avatar-rabbit.png" alt="ウサギのアバター" />
+          </div>
+          <p class="review__example-text scroll-animation scale delay-500">
+            モチベーションを上げるために使っています。頑張っているのは自分だけじゃないと思えるので、作業会に入ることでモチベーションを保てています。これからも利用していきたいです。
+          </p>
+        </div>
       </div>
-    </footer>
+    </section>
+
+    <section id="faq" class="faq inner scroll-animation">
+      <h2 class="section-title scroll-animation delay-100">
+        <span class="section-title__sub">その不安、解決します！</span>
+        Q&A
+      </h2>
+
+      <div class="faq__slider scroll-animation delay-500">
+        <div class="faq__slide">
+          <div class="faq__slide-img">
+            <img src="img/faq01.png" alt="FAQ画像1" />
+          </div>
+          <h3 class="faq__slide-title">全くの初心者でも参加できますか？</h3>
+          <p class="faq__slide-text">
+            サポートメンバーや他の参加者が丁寧にフォローします。
+          </p>
+        </div>
+
+        <div class="faq__slide">
+          <div class="faq__slide-img">
+            <img src="img/faq02.png" alt="FAQ画像2" />
+          </div>
+
+          <h3 class="faq__slide-title">
+            発言しなきゃいけませんか？黙って作業していても大丈夫？
+          </h3>
+
+          <p class="faq__slide-text">
+            「聞くだけ参加」「黙々作業」もOK。ご自身のペースで関わっていただけます。
+          </p>
+        </div>
+
+        <div class="faq__slide">
+          <div class="faq__slide-img">
+            <img src="img/faq03.png" alt="FAQ画像3" />
+          </div>
+
+          <h3 class="faq__slide-title">
+            どんな雰囲気の人が集まっていますか？
+          </h3>
+
+          <p class="faq__slide-text">
+            「悩みを共有しながら一緒に頑張ろう」というスタンスの人が多く、安心して参加できます。
+          </p>
+        </div>
+
+        <div class="faq__slide">
+          <div class="faq__slide-img">
+            <img src="img/faq04.png" alt="FAQ画像4" />
+          </div>
+
+          <h3 class="faq__slide-title">
+            いきなり参加するのは緊張します…<br />何から始めればいいですか？
+          </h3>
+
+          <p class="faq__slide-text">
+            「見るだけ」からでOK!<br />雰囲気をつかんでから、徐々に質問や交流を増やしていけますよ。
+          </p>
+        </div>
+
+        <div class="faq__slide">
+          <div class="faq__slide-img">
+            <img src="img/faq05.png" alt="FAQ画像5" />
+          </div>
+          <h3 class="faq__slide-title">質問って、どこまでしていいんですか？</h3>
+          <p class="faq__slide-text">
+            なんでもOK!<br>あなたの悩み、他の人も通ってきた悩みかも知れません。気軽に相談してくださいね！
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="entry inner scroll-animation">
+      <h2 class="section-title scroll-animation delay-100">
+        切磋琢磨できる<br class="sp" />仲間と出会おう！
+      </h2>
+
+      <div class="entry__content scroll-animation delay-200">
+        <div class="entry__img scroll-animation delay-300">
+          <img src="img/group.png" alt="Meta Leafの仲間たち" />
+        </div>
+
+        <div class="entry__button-block scroll-animation delay-400">
+          <button class="button">
+            <a href="https://app.metalife.co.jp/spaces" target="_blank"
+              ><span>参加してみる</span></a
+            >
+          </button>
+
+          <button class="button">
+            <a href="guide.html"><span>具体的な使い方を見る</span></a>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer inner">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <a href="#top"><img src="img/logo.svg" alt="meta leaf logo" /></a>
+      </div>
+
+      <nav class="footer__nav">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item"><a href="#top">TOP</a></li>
+          <li class="footer__nav-item"><a href="#overview">Meta Leaf</a></li>
+          <li class="footer__nav-item"><a href="#use">How to</a></li>
+          <li class="footer__nav-item"><a href="#event">EVENT's</a></li>
+          <li class="footer__nav-item"><a href="#review">Review</a></li>
+          <li class="footer__nav-item"><a href="#faq">Q&A</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__info">
+      <p class="footer__text">© 2023 Meta Leaf All Rights Reserved.</p>
+      <p class="footer__text">
+        このサイトは、Meta leafを紹介するためのサイトです。
+      </p>
+    </div>
+  </footer>
 
   <!-- 上に戻るボタン -->
   <div class="page-top" id="pageTop"></div>
