@@ -1,421 +1,956 @@
 /* 
+
 --------------------------
+
 Meta Leaf Usage Guide Page
+
 使い方ガイドページ専用CSS
+
 --------------------------
+
 */
+
+
+
 
 
 * {
+
     /* border: 1px solid; */
+
 }
+
+
 
 html {
+
     height: 100%;
+
 }
+
+
 
 body{
+
     /* max-width: 1440px; */
+
     /* width: 100vw; */
+
     height: 100%;
+
     margin: 0 auto;
-    overflow-x: hidden;
+
+    overflow-x: visible;
+
     font-size: 100%;
+
     line-height: 1.5;
+
     letter-spacing: .03em;
+
     /* background: var(--main-color); */
+
 }
 
 
+
+.section {
+
+  height: 150vh;
+
+  position: relative;
+
+  color: #fff;
+
+}
+
+
+
+.section1 {
+
+  background-color: #111;
+
+}
+
+
+
+.section2 {
+
+  background-color: #333;
+
+}
+
+
+
+.section3 {
+
+  background-color: #666;
+
+}
+
+
+
+.section4 {
+
+  background-color: #999;
+
+}
+
+
+
+.section5 {
+
+  background-color: #ccc;
+
+}
+
+
+
+.section__pin {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 10vw;
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+
+
+
+
+.section {
+
+  position: relative;
+
+  height: 150vh; /* 高さの確保 */
+
+}
+
+
+
+.section__pin {
+
+  position: absolute; /* 基本状態はabsolute */
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+
+
 /* 
+
 --------------------------
+
 Meta Step セクション共通
+
 --------------------------
+
 */
+
+
 
 .MetaStep__bg-color  {
+
     background-image: linear-gradient(#69bfab, #345f55 50%);
+
     /* border: 1px solid; */
+
 }
+
+
 
 .MetaStep__bg-color-entry {
+
     background-color: #345f55;
+
 }
+
+
 
 .MetaStep__bg-color-footer  {
+
     background-image: linear-gradient(#345f55, #69bfab 80%);
+
 }
+
+
 
 .MetaStep__box {
+
     display: flex;
+
     height: 100vh;
+
     max-width: 1000px;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin: 0 auto;
+
     /* border: 1px solid white; */
+
 }
+
+
 
 .MetaStep__subtitle {
+
     font-size: 2.4rem;
+
     color: var(--sub-color);
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .MetaStep__title {
+
     font-size: 8rem;
+
     font-weight: bold;
+
     color: var(--accent-color);
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .MetaStep__left {
+
     display: flex;
+
     width: 45%;
+
     height: 100%;
+
     flex: none;
+
     flex-direction: column;
+
     justify-content: center;
+
     overflow: hidden;
+
     /* border: 1px solid red; */
+
 }
+
+
 
 .MetaStep__right {
+
     width: 45%;
+
     height: 100%;
+
     flex: none;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     /* border: 1px solid greenyellow; */
+
 }
 
 
+
+
+
+
+
+
+
 /* 
+
 --------------------------
+
 サポート生紹介セクション 
+
 --------------------------
+
 */
+
+
 
 #support {
+
     display: flex;
+
     height: 100vh;
+
     flex-direction: column;
+
     align-items: center;
+
     padding: 4rem 2rem;
+
     /* background-color: #f0f0f0; */
+
 }
+
+
 
 .support__students {
+
     text-align: center;
+
     margin-top: 10rem;
+
     font-size: 6.4rem;
+
 }
+
+
 
 .support__students-img {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    /* gap: 2rem; */
+
     width: 90%;
+
     margin: 10rem auto;
+
     border: 1px solid #69bfab;
+
 }
+
+
 
 .support__students-img img {
+
     width: 24%;
+
     height: 300px;
+
+    object-fit: cover;
+
     /* border: 1px solid blue; */
+
 }
 
+
+
 .support__students-message {
+
     /* margin-bottom: 10rem; */
+
     text-align: center;
+
     line-height: 2.0;
+
     font-size: 1.6rem;
+
 }
+
+
+
 
 
 /* 
+
 --------------------------
+
 Meta Step 01セクション
+
 --------------------------
+
 */
+
+
+
 
 
 #MetaStep01 {
+
     display: flex;
+
     height: 100vh;
+
     align-items: center;
+
     padding: 4rem 2rem;
+
     gap: 3rem;
+
     /* border: 1px solid white; */
+
 }
+
+
 
 #MetaStep01
-.MetaStep__left {
-    text-align: center;
-}
 
 .MetaStep__left {
-    flex: none;
+
+    text-align: center;
+
 }
+
+
+
+.MetaStep__left {
+
+    flex: none;
+
+}
+
+
 
 .MetaStep__visitors {
+
     font-size: 4rem;
+
     color: var(--text-color);
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .MetaStep__text01 {
+
     font-size: 1.6rem;
+
     line-height: 2.4;
+
     color: var(--text-color);
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .MetaStep__right img {
+
     width: 100%;
+
     border-radius: 2rem;
+
     /* border: 1px solid red; */
+
 }
 
+
+
 /* 
+
 --------------------------
+
 Meta Step 02セクション
+
 --------------------------
+
 */
+
+
+
 
 
 #MetaStep02 {
+
     display: flex;
+
     height: 100vh;
+
     align-items: center;
+
     padding: 4rem 2rem;
+
     gap: 3rem;
+
     /* border: 1px solid white; */
+
 }
 
+
+
 #MetaStep02
+
 .MetaStep__left {
+
     width: 50%;
+
 }
+
+
 
 #MetaStep02
+
 .MetaStep__subtitle, 
+
 .MetaStep__title, 
+
 .MetaStep__goto-gate {
+
     margin: 0 auto;
+
 }
+
+
+
 
 
 .MetaStep__goto-gate {
+
     font-size: 4rem;
+
     color: var(--text-color);
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .MetaStep__text02 {
+
     font-size: 1.6rem;
+
     line-height: 1.8;
+
     color: var(--text-color);
+
 }
+
+
 
 .MetaStep__text02 dt {
+
     font-weight: bold;
+
     margin-bottom: 0.5rem;
+
     color: var(--accent-color);
+
 }
+
+
 
 .MetaStep__text02 dd {
+
     margin-bottom: 1.5rem;
+
     margin-left: 2rem;
+
 }
 
+
+
 /* 
+
 --------------------------
+
 Meta Step 03セクション
+
 --------------------------
+
 */
 
 
+
+
+
 #MetaStep03 {
+
     display: flex;
+
     height: 100vh;
+
     align-items: center;
+
     padding: 4rem 2rem;
+
     gap: 3rem;
+
     /* border: 1px solid white; */
+
 }
+
+
 
 #MetaStep03
+
 .MetaStep__left {
+
     text-align: center;
+
 }
+
+
 
 .MetaStep__howto-use {
+
     font-size: 4rem;
+
     color: var(--text-color);
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .MetaStep__howto-use-subtitle {
+
     font-size: 1.8rem;
+
     color: var(--text-color);
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .MetaStep__left-top {
+
     width: 50%;
+
     margin: 0 auto;
+
     /* margin-bottom: 2rem; */
+
     /* border: 1px solid red; */
+
 }
+
+
 
 .MetaStep__left-bottom {
+
     margin: 0 auto;
+
     width: 50%;
+
     /* height: 20rem; */
+
     /* border: 1px solid blue; */
+
 }
+
+
 
 .MetaStep__left-top img,
-.MetaStep__left-bottom img {
-    width: 100%;
-    max-height: 20rem;
-    height: auto;
-    border-radius: 2rem;
-    /* border: 1px solid orange; */
-}
 
 .MetaStep__left-bottom img {
-    height: 15rem;
+
+    width: 100%;
+
+    max-height: 20rem;
+
+    height: auto;
+
+    border-radius: 2rem;
+
+    /* border: 1px solid orange; */
+
 }
+
+
 
 .MetaStep__textBox03 {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 2rem;
+
 }
+
+
 
 .MetaStep__text0301,
+
 .MetaStep__text0302,
+
 .MetaStep__text0303,
+
 .MetaStep__text0304 {
+
     padding: 2rem;
+
     background-color: rgba(255, 255, 255, 0.1);
+
     border-radius: 1rem;
+
     border-left: 4px solid var(--accent-color);
+
 }
+
+
 
 .MetaStep__text03-index01,
+
 .MetaStep__text03-index02,
+
 .MetaStep__text03-index03,
+
 .MetaStep__text03-index04 {
+
     font-size: 1.8rem;
+
     font-weight: bold;
+
     color: var(--accent-color);
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .MetaStep__text03-detail01,
+
 .MetaStep__text03-detail02,
+
 .MetaStep__text03-detail03,
+
 .MetaStep__text03-detail04 {
+
     font-size: 1.4rem;
+
     line-height: 1.6;
+
     color: var(--text-color);
+
 }
+
+
 
 /* レスポンシブ対応 */
+
 @media screen and (max-width: 768px) {
+
     .support__students {
+
         font-size: 4rem;
+
         margin-top: 5rem;
+
     }
+
+
 
     .support__students-img {
+
         width: 100%;
+
     }
 
-    /* #MetaStep01,
-    #MetaStep02,
-    #MetaStep03 {
-        flex-direction: column;
+
+
+
+
+    .support__students-img img {
+
+        width: 48%;
+
+        height: auto;
+
+    }
+
+
+
+    .support__students-message {
+
+        width: 100%;
+
         padding: 2rem 1rem;
+
         gap: 2rem;
-    } */
+
+    }
+
+
 
     #MetaStep01,
+
     #MetaStep02,
+
     #MetaStep03 {
-        height: auto;
-    }
 
-    .MetaStep__box {
         width: 100%;
+
         flex-direction: column;
-        height: 100%;
+
         padding: 2rem 1rem;
+
         gap: 2rem;
+
     }
 
-    .MetaStep__left,
-    .MetaStep__right {
-        width: 100%;
-        flex: none;
-        border: none;
-        text-align: center;
+
+
+    #MetaStep02
+
+    .MetaStep__left {
+
+    width: 100%;
+
+}
+
+
+
+
+
+    #support {
+
+        padding: 2rem 1rem;
+
     }
 
-    #MetaStep02 .MetaStep__text02 {
-        text-align: left;
-    }
 
-    #MetaStep03 .MetaStep__left-top,
-    #MetaStep03 .MetaStep__left-bottom {
-        margin: 0 auto;
-    }
 
     .MetaStep__title {
+
         font-size: 6rem;
+
     }
+
+
 
     .MetaStep__visitors,
+
     .MetaStep__goto-gate,
+
     .MetaStep__howto-use {
+
         font-size: 2.8rem;
+
     }
+
+
 
     .MetaStep__text01,
+
     .MetaStep__text02 {
+
         font-size: 1.4rem;
+
     }
+
+
 
     .MetaStep__howto-use-subtitle {
+
         font-size: 1.6rem;
+
     }
+
+
 
     .MetaStep__text03-index01,
+
     .MetaStep__text03-index02,
+
     .MetaStep__text03-index03,
+
     .MetaStep__text03-index04 {
+
         font-size: 1.6rem;
+
     }
+
+
 
     .MetaStep__text03-detail01,
+
     .MetaStep__text03-detail02,
+
     .MetaStep__text03-detail03,
+
     .MetaStep__text03-detail04 {
+
         font-size: 1.2rem;
+
     }
 
+
+
     .MetaStep__box {
+
         flex-direction: column;
+
         height: auto;
+
         max-width: 100%;
+
         padding: 0 1rem;
+
     }
+
     .MetaStep__left,
+
     .MetaStep__right {
+
         width: 100%;
+
         height: auto;
+
         margin: 0;
+
     }
+
+
+
+    .section {
+
+        height: auto !important;
+
+        min-height: 60vh;
+
+    }
+
+    .section__pin {
+
+        position: static !important;
+
+        height: auto !important;
+
+        min-height: 60vh;
+
+    }
+
 }
+
+
+
