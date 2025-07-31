@@ -22,7 +22,6 @@ $(document).ready(function() {
                     // ローディング要素を非表示
                 }, 2000); // CSSのtransition時間（2秒）に合わせる
             }, 2000); // 表示時間2秒
-        } else {
         }
     }
     
@@ -105,4 +104,34 @@ $(document).ready(function() {
             scrollTop: 0
         }, 500);
     });
+
+    // スクロールアニメーション機能
+    function initScrollAnimation() {
+        const animationElements = $('.scroll-animation');
+        
+        // 要素が画面に入ったかを判定する関数
+        function checkAnimation() {
+            const windowHeight = $(window).height();
+            const scrollTop = $(window).scrollTop();
+            
+            animationElements.each(function() {
+                const $element = $(this);
+                const elementTop = $element.offset().top;
+                // 要素の上端が画面の80%（2割）の位置に達したらアニメーション開始
+                const triggerPoint = scrollTop + windowHeight * 0.8;
+                
+                if (triggerPoint > elementTop && !$element.hasClass('is-visible')) {
+                    $element.addClass('is-visible');
+                }
+            });
+        }
+        
+        // スクロール時とページ読み込み時にチェック
+        $(window).on('scroll', checkAnimation);
+        $(window).on('load', checkAnimation);
+        checkAnimation(); // 初回実行
+    }
+    
+    // スクロールアニメーション初期化
+    initScrollAnimation();
 });

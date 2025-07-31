@@ -11,13 +11,13 @@
     outline: 1px solid magenta;
 } */
 
-html {
-  width: 100%;
-  font-size: 62.5%;
-  font-family: "Yusei Magic", "Kaisei Opti", "Kiwi Maru", "Noto Sans",
-    sans-serif;
-  color: var(--text-color);
-  overflow-x: hidden;
+html{
+    width: 100%;
+    font-size: 62.5%;
+    font-family: "Yusei Magic", "Kaisei Opti", "Kiwi Maru", "Noto Sans", sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -636,6 +636,13 @@ section.overview {
   letter-spacing: 3;
 }
 
+
+@media screen and (max-width: 768px) {
+    section.overview {
+        padding: 6rem 2rem;
+    }
+}
+
 /* 効率的な活用法セクション */
 .use {
   width: 100%;
@@ -684,9 +691,13 @@ section.overview {
 }
 
 @media screen and (max-width: 768px) {
-  .use__slider {
-    margin-top: 6rem;
-  }
+    .use {
+        padding: 6rem 2rem;
+    }
+    
+    .use__slider {
+        margin-top: 6rem;
+    }
 }
 
 /* オンラインイベントセクション */
@@ -802,31 +813,35 @@ section.overview {
 }
 
 @media screen and (max-width: 768px) {
-  .event__content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    grid-template-areas:
-      "premium"
-      "contest"
-      "drinking"
-      "beginner";
-  }
+    .event {
+        padding: 6rem 2rem;
+    }
 
-  .event__item {
-    padding: 2rem 1.5rem;
-  }
-
-  .event__title {
-    font-size: 3.2rem;
-  }
-
-  .event__schedule {
-    font-size: 2rem;
-  }
-
-  .event__participants-count {
-    font-size: 5.6rem;
-  }
+    .event__content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        grid-template-areas: 
+            "premium"
+            "contest"
+            "drinking"
+            "beginner";
+    }
+    
+    .event__item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .event__title {
+        font-size: 3.2rem;
+    }
+    
+    .event__schedule {
+        font-size: 2rem;
+    }
+    
+    .event__participants-count {
+        font-size: 5.6rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -917,9 +932,19 @@ section.overview {
 }
 
 @media screen and (max-width: 768px) {
-  .review__content {
-    gap: 2rem;
-  }
+    .review {
+        padding: 6rem 2rem;
+    }
+
+    .review__content {
+        gap: 2rem;
+    }
+
+    .review__example-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
 
   .review__example-block {
     flex-direction: column;
@@ -1011,10 +1036,16 @@ section.overview {
   margin-top: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+    .faq {
+        padding: 6rem 2rem;
+    }
+}
+
 /* エントリーセクション */
 .entry {
-  width: 100%;
-  padding: 4rem 2rem;
+    width: 100%;
+    padding: 8rem 2rem;
 }
 
 .entry .section-title {
@@ -1022,11 +1053,11 @@ section.overview {
 }
 
 .entry__content {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10vw;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
 }
 
 .entry__img {
@@ -1051,10 +1082,10 @@ section.overview {
   gap: 1rem;
 }
 
-@media screen and (max-width: 768px) {
-  .entry {
-    padding: 3rem 2rem;
-  }
+@media screen and (max-width:768px) {
+    .entry {
+        padding: 6rem 2rem;
+    }
 
   .entry__content {
     flex-direction: column;
@@ -1062,10 +1093,10 @@ section.overview {
     gap: 3rem;
   }
 
-  .entry__img {
-    width: 90%;
-    height: auto;
-  }
+    .entry__img {
+        width: clamp(20rem, 80%, 40rem);
+        height: auto;
+    }
 
   .entry__button-block {
     width: 90%;
@@ -1110,8 +1141,20 @@ section.overview {
 }
 
 .footer__nav-item {
-  padding: 0 1rem;
-  font-size: 1.6rem;
+    font-size: 1.6rem;
+}
+
+.footer__nav-item a {
+    padding: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer__nav-item a:hover {
+    color: var(--accent-color);
+}
+
+.footer__logo a:hover {
+    opacity: 0.8;
 }
 
 .footer__info {
@@ -1212,4 +1255,76 @@ section.overview {
   .page-top::before {
     font-size: 1.6rem;
   }
+}
+
+/* スクロールアニメーション */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+    transition-delay: 0s;
+}
+
+.scroll-animation.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* アニメーション遅延のバリエーション */
+.scroll-animation.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.scroll-animation.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.scroll-animation.delay-300 {
+    transition-delay: 0.3s;
+}
+
+.scroll-animation.delay-400 {
+    transition-delay: 0.4s;
+}
+
+.scroll-animation.delay-500 {
+    transition-delay: 0.5s;
+}
+
+/* スケールアニメーション */
+.scroll-animation.scale {
+    transform:scale(0.5);
+    transform-origin: left center;
+}
+
+.scroll-animation.scale-reverse {
+    transform:scale(0.5);
+    transform-origin: right center;
+}
+
+.scroll-animation.scale.is-visible {
+    transform:scale(1);
+}
+
+.scroll-animation.scale-reverse.is-visible {
+    transform:scale(1);
+}
+
+@media screen and (max-width: 768px) {
+    .scroll-animation {
+        transform: translateY(20px);
+    }
+
+    .scroll-animation.is-visible {
+        transform: translateY(0);
+    }
+
+    .scroll-animation.scale {
+        transform-origin: top center;
+    }
+
+    .scroll-animation.scale-reverse {
+        transform:scale(0.5);
+        transform-origin: top center;
+    }
 }
