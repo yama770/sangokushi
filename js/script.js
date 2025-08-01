@@ -180,6 +180,7 @@ $(document).ready(function() {
         // アンカーリンク、guide.htmlリンク、index.htmlリンクを対象にする
         $('a[href^="#"], a[href*="index.html#"], a[href="guide.html"], a[href="index.html"]').click(function(e) {
             const href = $(this).attr('href');
+            const currentPage = window.location.pathname;
             
             // guide.htmlへの遷移の場合
             if (href === 'guide.html') {
@@ -195,7 +196,7 @@ $(document).ready(function() {
             }
             
             // index.htmlへの遷移の場合（guide.htmlから）
-            if (href === 'index.html' && window.location.pathname.includes('guide.html')) {
+            if (href === 'index.html' && currentPage.includes('guide.html')) {
                 e.preventDefault();
                 
                 // ページ遷移フラグを設定
@@ -207,36 +208,57 @@ $(document).ready(function() {
                 return false;
             }
             
-            // 外部ページのアンカーリンクの場合
-            if (href.includes('index.html#') || (window.location.pathname.includes('guide.html') && href.startsWith('#'))) {
+            // ガイドページ内でのアンカーリンク処理
+            if (currentPage.includes('guide.html') && href.startsWith('#')) {
                 e.preventDefault();
                 
-                // ページ遷移フラグを設定
-                sessionStorage.setItem('pageTransition', 'true');
+                // TOPリンク（#のみ）の場合は最上部へ
+                if (href === '#' || href === '#top') {
+                    smoothScrollTo(0, 800);
+                    return false;
+                }
                 
-                // ページ遷移（ローディング表示なし）
-                if (href.includes('index.html#')) {
-                    window.location.href = href;
+                // 特定のセクションへのスクロール
+                const target = $(href);
+                if (target.length) {
+                    const targetOffset = target.offset().top - 100; // ヘッダー分のオフセット
+                    smoothScrollTo(targetOffset, 800);
                 } else {
-                    // guide.htmlからindex.htmlへの遷移
+                    // セクションが見つからない場合、index.htmlへ遷移
+                    sessionStorage.setItem('pageTransition', 'true');
                     window.location.href = 'index.html' + href;
                 }
                 
                 return false;
             }
             
-            // 同ページ内のスクロール
-            if (href !== '#' && href !== '#top') {
+            // 外部ページのアンカーリンクの場合
+            if (href.includes('index.html#')) {
                 e.preventDefault();
-                const target = $(href);
                 
-                if (target.length) {
-                    const targetOffset = target.offset().top - 100; // ヘッダー分のオフセット
-                    smoothScrollTo(targetOffset, 800);
+                // ページ遷移フラグを設定
+                sessionStorage.setItem('pageTransition', 'true');
+                
+                // ページ遷移（ローディング表示なし）
+                window.location.href = href;
+                
+                return false;
+            }
+            
+            // index.html内での同ページ内のスクロール
+            if (!currentPage.includes('guide.html') && href.startsWith('#')) {
+                if (href !== '#' && href !== '#top') {
+                    e.preventDefault();
+                    const target = $(href);
+                    
+                    if (target.length) {
+                        const targetOffset = target.offset().top - 100; // ヘッダー分のオフセット
+                        smoothScrollTo(targetOffset, 800);
+                    }
+                } else if (href === '#' || href === '#top') {
+                    e.preventDefault();
+                    smoothScrollTo(0, 800);
                 }
-            } else if (href === '#' || href === '#top') {
-                e.preventDefault();
-                smoothScrollTo(0, 800);
             }
         });
     }
