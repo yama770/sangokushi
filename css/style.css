@@ -733,6 +733,14 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+  /* ナビゲーションのレスポンシブ対応 */
+  header nav ul li {
+    margin-right: 15px; /* 30px → 15px に変更 */
+  }
+
+  header nav ul li a {
+    font-size: 14px; /* 16px → 14px に変更 */
+  }
 }
 
 /* --------- pumpkin画像調整 ---------- */
