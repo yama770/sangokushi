@@ -5,7 +5,7 @@ $(document).ready(function() {
         const hasVisited = localStorage.getItem('metaleaf-visited');
         
         // デバッグ用：localStorageをクリアしたい場合は下記のコメントアウトを外す
-        // localStorage.removeItem('metaleaf-visited');
+        localStorage.removeItem('metaleaf-visited');
 
         // 初回訪問の場合のみローディングを表示
         if (!hasVisited) {
